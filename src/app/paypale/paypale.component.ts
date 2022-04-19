@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PaypaleComponent implements OnInit {
 amount!:Number;
+email!:String;
   constructor(private donate:PaymentService,private route:ActivatedRoute) {
 
 
@@ -17,6 +18,7 @@ amount!:Number;
   ngOnInit(): void {
     this.route.params.subscribe(data=>{
       this.amount = Number(data['id']);
+      this.email = String(data['id2']);
       console.log(data);
     });
    console.log(this.amount);
@@ -25,6 +27,9 @@ amount!:Number;
     value: this.amount.toString(),
     currency: 'LE',
     onApprove:(state=>{
+      this.donate.sendInvoice(this.email,this.amount).subscribe(data=>{
+        console.log(data);
+      });
       alert("payment Successfully");
     })
   });
