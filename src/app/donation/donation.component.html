@@ -1,0 +1,6 @@
+<label for="email"></label>
+<input type="email" id="email" #emailRef>
+
+<label for="amount"></label>
+<input type="number" min="1" id="amount" #amountRef>
+<button (click)="onSubmit(emailRef.value,amountRef.value)" style="font-size: large;">Donate</button>
