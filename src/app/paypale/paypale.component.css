@@ -1,0 +1,10 @@
+#mypaypalButtons{
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+  position: absolute;
+
+  left: 40%;
+  top: 30%;
+  }
+

@@ -1,3 +1,4 @@
+import { EntryComponent } from './entry/entry.component';
 import { DonationComponent } from './donation/donation.component';
 import { PaypaleComponent } from './paypale/paypale.component';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,8 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path:"donation/:id/:id2",component:PaypaleComponent},
-  {path:"pay",component:DonationComponent}
+  {path:"pay",component:DonationComponent},
+  {path:"",component:EntryComponent}
 ];
 
 @NgModule({

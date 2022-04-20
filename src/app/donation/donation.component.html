@@ -1,6 +1,6 @@
-<label for="email"></label>
-<input type="email" id="email" #emailRef>
+
+<input type="email" id="email" #emailRef class="form-control" placeholder="Email">
 
 <label for="amount"></label>
-<input type="number" min="1" id="amount" #amountRef>
-<button (click)="onSubmit(emailRef.value,amountRef.value)" style="font-size: large;">Donate</button>
+<input type="number" min="1" id="amount" #amountRef placeholder="DonationValue" class="form-control">
+<button (click)="onSubmit(emailRef.value,amountRef.value)" style="font-size: large;" class="btn btn-success">Donate</button>

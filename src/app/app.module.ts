@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PaypaleComponent } from './paypale/paypale.component';
 import { DonationComponent } from './donation/donation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EntryComponent } from './entry/entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaypaleComponent,
-    DonationComponent
+    DonationComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,
