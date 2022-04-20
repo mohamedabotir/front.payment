@@ -1,6 +1,17 @@
 
-<input type="email" id="email" #emailRef class="form-control" placeholder="Email">
 
-<label for="amount"></label>
-<input type="number" min="1" id="amount" #amountRef placeholder="DonationValue" class="form-control">
-<button (click)="onSubmit(emailRef.value,amountRef.value)" style="font-size: large;" class="btn btn-success">Donate</button>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" id="email" #emailRef class="form-control" placeholder="Email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">DonationValue</label>
+    <input type="number" min="1" id="amount" #amountRef placeholder="DonationValue" class="form-control">
+  </div>
+
+  <button (click)="onSubmit(emailRef.value,amountRef.value)" style="font-size: large;" class="btn btn-success">Donate</button>
+</form>
